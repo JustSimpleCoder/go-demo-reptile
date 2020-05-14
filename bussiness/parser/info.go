@@ -9,8 +9,8 @@ import (
 )
 
 var regTitle = regexp.MustCompile(`<title>(.+)</title>`)
-var regKeywords = regexp.MustCompile(`<meta name="keywords" content="(.+)"[^>]*>`)
-var regDes = regexp.MustCompile(`<meta name="description" content="(.+)"`)
+var regKeywords = regexp.MustCompile(`<meta name="(?i)keywords" content="(.+)"[^>]*>`)
+var regDes = regexp.MustCompile(`<meta name="(?i)description" content="(.+)"`)
 
 func ParseInfo(contents []byte, url string) engine.ParseResult {
 

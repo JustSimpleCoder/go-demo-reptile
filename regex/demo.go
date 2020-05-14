@@ -6,12 +6,12 @@ import (
 	"strings"
 )
 
-const text = " hahah  woiskobe@gmail.com       "
+const text = " hahah  Woiskobe@gmail.com       "
 
 func main() {
 
-	re := regexp.MustCompile(`(.+)@(.+\..+)`)
+	re := regexp.MustCompile(`(?i)(w.+)@(.+\..+)`)
 	match := re.FindAllStringSubmatch(text, -1)
-	fmt.Println(match)
+	fmt.Println(match[0][1])
 	fmt.Printf(strings.TrimSpace(text))
 }
